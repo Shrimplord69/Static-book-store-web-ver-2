@@ -9,6 +9,21 @@ document.querySelector('#search-btn').onclick = () =>{
     searchForm.classList.toggle('active');
 }
 
+/*This line of code selects the first element in the DOM with the class name 'login-form-container' and assigns it to a variable named 'loginForm' */
+let loginForm = document.querySelector('.login-form-container');
+
+/*This line of code sets up a click event listener on an element with the ID login-btn. When this element is clicked, the code inside the arrow function (callback function) will be executed */
+document.querySelector('#login-btn').onclick = () =>{
+    /*This line of code toggles whether the CSS class is present on the element that the variable 'loginForm' refers to. The class will be added if the element doesn't already have it, and removed if it does. When the element with ID 'login-btn' is clicked, this may be used to display or hide a login form or apply any other required styling or behavior to the element with the class name login-form-container */
+    loginForm.classList.toggle('active');
+}
+/*This line of code sets up a click event listener on an element with the ID close-login-btn. When this element is clicked, the code inside the arrow function (callback function) will be executed */
+document.querySelector('#close-login-btn').onclick = () =>{
+    /*This line of code remove whether the CSS class is present on the element that the variable 'loginForm' refers to. The class will be added if the element doesn't already have it, and removed if it does. When the element with ID 'login-btn' is clicked, this may be used to display or hide a login form or apply any other required styling or behavior to the element with the class name login-form-container */
+    loginForm.classList.remove('active');
+}
+
+
 
 
 /*setting up an event listener that triggers whenever the user scrolls the window*/
