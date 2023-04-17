@@ -1,3 +1,18 @@
+/*========================================================================================*/
+/*RMIT University Vietnam
+  Course: COSC2430 Web Programming
+  Semester: 2023A
+  Assessment: Assignment 1
+  Author: Your names (e.g. Nguyen Van Minh)
+  ID: Your student ids (e.g. 1234567)
+  Acknowledgement:
+  https://swiperjs.com/demos
+  https://thecomicbookstore.in
+  https://kingscomics.com
+  https://cdnjs.com/libraries/font-awesome
+  https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#theprojectfolderstructure
+*/
+/*=======================================================================================*/
 
 
 /*This line of code selects an element in the DOM with the class name 'search-form' and assigns it to a variable named 'searchForm'. The 'document.querySelector()' method is used to select the first element that matches the specified CSS selector.*/
@@ -60,3 +75,28 @@ document.querySelector('#close-login-btn').onclick = () =>{
         }
         /*This code used to apply or remove styling or behavior to the selected element based on the user's scrolling behavior after the page has finished loading.*/ 
     }
+
+/*book slider section*/
+/*swiper*/
+var swiper = new Swiper(".books-slider", {
+    //let you loop througt the selected few of products infinitely
+    loop:true,
+    centeredSlides:true,
+    //will automatically move from left to right well user doesn't interact with the slider 
+    autoplay:{
+        delay: 9500,
+        disableOnInteraction:false
+    },
+    //will show a certain amount of products at a time on the shelf base on user's device screen resolution
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
