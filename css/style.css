@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/* a pre set of color*/
+:root{
+    --green: #27ae60;
+    --dark-color: #219150;
+    --black: #444;
+    --light-color: #666;
+    --border: .1rem solid rgba(0,0,0, .1);
+    --boder-hover: .1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0, .1);
+}
+
+/*all setting*/
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition:width none;
+}
+
+/*HTML*/
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent ;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--black) ;
+}
+
+/*Header*/
+
+    /*header 1*/
+
+        /*adjust header-1's sections placement*/
+        .header .header-1{
+            background: #fff;
+            padding: 1.5rem 9%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /*adjust the whole logo (include the logo & name) */
+        .header .header-1 .logo{
+            font-size: 2.5rem;
+            font-weight: bolder;
+            color: var(--black);
+        }
+
+            /*adjust the logo only*/
+            .header .header-1 .logo i{
+                color: var(--green);
+            }
+
+        /*search section*/
+        .header .header-1 .search-form{
+            width: 50rem;
+            height: 5rem;
+            border:var(--border);
+            overflow: hidden;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            border-radius: .5rem;
+        }
+            /*search input*/
+            .header .header-1 .search-form input{
+                font-size: 1.6rem;
+                padding: 0 1.2rem;
+                height: 100%;
+                width: 100%;
+                text-transform: none;
+                color: var(--black);
+            }
+
+            /*search label (magnify glass icon)*/
+            .header .header-1 .search-form label{
+                font-size: 2.5rem;
+                padding-right: 1.5rem;
+                color: var(--black);
+                cursor: pointer;
+            }
+
+                /*magnify glass colored when hover*/
+                .header .header-1 .search-form label:hover{
+                    color: var(--green);
+                }
+
+        /*icons (heart, cart, account)*/
+        .header .header-1 .icons div,
+        .header .header-1 .icons a{
+            font-size: 2.5rem;
+            margin-left: 1.5rem;
+            color: var(--black);
+            cursor: pointer;
+        }
+
+            /*icons colored when hover*/
+            .header .header-1 .icons div:hover,
+            .header .header-1 .icons a:hover{
+                color: var(--green);
+            }
+
+        /*button*/
+        #search-btn{
+            display: none;
+        }
+
+    /*header 2*/
+        
+        /*adjust header-2's sections placement*/
+        .header .header-2{
+            background: var(--green);
+        }    
+        
+        /*header-2 navbar*/
+        .header .header-2 .navbar{
+            text-align: center;
+        }
+
+            /*adjust navbar content*/
+            .header .header-2 .navbar a{
+                color: #fff;
+                display: inline-block;
+                padding: 1.2rem;
+                font-size: 1.7rem;
+            }
+
+                /*color specific navbar content when hover*/
+                .header .header-2 .navbar a:hover{
+                    background: var(--dark-color);
+                } 
+        
+        /*header-2 active*/
+        /*make the navbar always fixed to the top part of the screen*/
+        .header .header-2.active{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }  
+        
+/*bottom navbar*/
+    /*bottom navbar adjust*/
+    .bottom-navbar{
+        text-align: center;
+        background: var(--green);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+        /*bottom navbar's content adjust*/
+        .bottom-navbar a{
+            font-size: 2.5rem;
+            padding:2rem;
+            color: #fff;
+        }
+
+            /*bottom navbar's content colored when hover*/
+            .bottom-navbar a:hover{
+                background: var(--dark-color);
+            }
+
+
+
+
+
+
+
+/*media queries*/
+/*adjust sizes of sections base on user's screen*/
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header .header-1{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px){
+
+    html{
+        scroll-padding-top: 0;
+    }
+
+    body{
+        padding-bottom: 6rem;
+    }
+
+    .header .header-2{
+        display: none;
+    }
+
+    /*!NOTE! this will only be applied to devices with smaller srceen resolution, the search bar will act normal with other devices with bigger srceen*/
+    /*this will replace all the tags of the original navbar above with icons and move it to the bottom for the ease of use of users with smaller screen devices */
+    .bottom-navbar{
+        display: block;
+    }
+
+    #search-btn{
+        display: inline-block;
+    }
+
+    .header .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+
+    /*!NOTE! this will only be applied to devices with smaller srceen resolution, the search bar will act normal with other devices with bigger srceen*/
+    /*This will first hide the search bar, only show the magnify glass icon*/
+    .header .header-1 .search-form{
+        position: absolute; 
+        top: -115%;    /**/
+        right: 2rem;
+        width: 90%;
+        box-shadow: var(--box-shadow);  
+    }
+        /*when pressed the magnify glass icon, the search bar will drop down*/
+        .header .header-1 .search-form.active{
+            top: 115%;  /**/
+        }
+
+}
+  
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*!Testing section!*/
