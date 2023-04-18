@@ -7,6 +7,8 @@
   ID: Your student ids (e.g. 1234567)
   Acknowledgement:
   https://swiperjs.com/demos
+  https://codesandbox.io/p/sandbox/mvjbdm?file=%2Findex.html&selection=%5B%7B"endColumn"%3A9%2C"endLineNumber"%3A78%2C"startColumn"%3A7%2C"startLineNumber"%3A75%7D%5D
+  https://codesandbox.io/p/sandbox/fojg89?file=%2Findex.html
   https://thecomicbookstore.in
   https://kingscomics.com
   https://cdnjs.com/libraries/font-awesome
@@ -100,3 +102,63 @@ var swiper = new Swiper(".books-slider", {
       },
     },
   });
+
+/*featured book slider section*/
+/*swiper*/
+var swiper = new Swiper(".featured-slider", {
+    //let you loop througt the selected few of products infinitely
+    spaceBetween:10,
+    loop:true,
+    centeredSlides:true,
+    //will automatically move from left to right well user doesn't interact with the slider 
+    autoplay:{
+        delay: 9500,
+        disableOnInteraction:false
+    },
+    //set 2 arrow button each to the side so user can click to move to the next featured product's slider
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    //will show a certain amount of products at a time on the shelf base on user's device screen resolution
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      450: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      }, 
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+/*Arrivals book slider section*/
+/*swiper*/
+var swiper = new Swiper(".arrivals-slider", {
+    //let you loop througt the selected few of products infinitely
+    spaceBetween:10,
+    loop:true,
+    centeredSlides:true,
+    //will automatically move from left to right well user doesn't interact with the slider 
+    autoplay:{
+        delay: 9500,
+        disableOnInteraction:false
+    },
+    //will show a certain amount of products at a time on the shelf base on user's device screen resolution
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      }, 
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });  
