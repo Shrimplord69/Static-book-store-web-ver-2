@@ -100,7 +100,7 @@ section{
         border: var(--border);
     }
 
-/*button (affect: sign in,  )*/
+/*button */
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -178,7 +178,7 @@ section{
                     color: var(--green);
                 }
 
-        /*icons (heart, cart, account)*/
+        /*icons (heart, cart, account, headset)*/
         .header .header-1 .icons div,
         .header .header-1 .icons a{
             font-size: 2.5rem;
@@ -349,6 +349,80 @@ section{
     
         /*close login form button*/
         .login-form-container #close-login-btn{
+            position: absolute;
+            top: 1.5rem;
+            right:2.5rem;
+            font-size: 5rem;
+            color: var(--black);
+            cursor: pointer;
+        }
+
+/*contact section*/
+.contact-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 9);
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+
+    /*contact form when clicked*/
+    .contact-form-container.active{
+        right:0;
+    }
+
+    /*contact form*/
+    .contact-form-container form{
+        background: #fff;
+        border: var(--border);
+        width: 40rem;
+        padding: 2rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        margin: 2rem;
+    }
+
+        /*contact form header*/
+        .contact-form-container form h3{
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: var(--black);
+            text-align: center;
+        }
+
+        /*contact form content section*/
+        .contact-form-container form span{
+            display: block;
+            font-size: 1.5rem;
+            padding-top: 1rem;
+        }
+
+    
+        .contact-form-container form .box{
+            width: 100%;
+            margin: .7rem 0;
+            font-size: 1.6rem;
+            border: var(--border);
+            border-radius: .5rem;
+            padding: 1rem 1.2rem;
+            color: var(--black);
+            text-transform: none;
+        }
+
+        /* adjust contact form's submit button */
+        .contact-form-container form .btn{
+            text-align: center;
+            width: 100%;
+            margin: 1.5rem 3;
+        }
+
+        /*close contact form button*/
+        .contact-form-container #close-contact-btn{
             position: absolute;
             top: 1.5rem;
             right:2.5rem;

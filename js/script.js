@@ -17,7 +17,7 @@
 */
 /*=======================================================================================*/
 
-
+//search section
 /*This line of code selects an element in the DOM with the class name 'search-form' and assigns it to a variable named 'searchForm'. The 'document.querySelector()' method is used to select the first element that matches the specified CSS selector.*/
 searchForm=document.querySelector('.search-form')
 
@@ -27,6 +27,7 @@ document.querySelector('#search-btn').onclick = () =>{
     searchForm.classList.toggle('active');
 }
 
+//login section
 /*This line of code selects the first element in the DOM with the class name 'login-form-container' and assigns it to a variable named 'loginForm' */
 let loginForm = document.querySelector('.login-form-container');
 
@@ -41,7 +42,20 @@ document.querySelector('#close-login-btn').onclick = () =>{
     loginForm.classList.remove('active');
 }
 
+//contact section
+/*This line of code selects the first element in the DOM with the class name 'contact-form-container' and assigns it to a variable named 'contactForm' */
+let contactForm = document.querySelector('.contact-form-container');
 
+/*This line of code sets up a click event listener on an element with the ID contact-btn. When this element is clicked, the code inside the arrow function (callback function) will be executed */
+document.querySelector('#contact-btn').onclick = () =>{
+    /*This line of code toggles whether the CSS class is present on the element that the variable 'contactForm' refers to. The class will be added if the element doesn't already have it, and removed if it does. When the element with ID 'contact-btn' is clicked, this may be used to display or hide a contact form or apply any other required styling or behavior to the element with the class name contact-form-container */
+    contactForm.classList.toggle('active');
+}
+/*This line of code sets up a click event listener on an element with the ID close-contact-btn. When this element is clicked, the code inside the arrow function (callback function) will be executed */
+document.querySelector('#close-contact-btn').onclick = () =>{
+    /*This line of code remove whether the CSS class is present on the element that the variable 'contactForm' refers to. The class will be added if the element doesn't already have it, and removed if it does. When the element with ID 'contact-btn' is clicked, this may be used to display or hide a contact form or apply any other required styling or behavior to the element with the class name contact-form-container */
+    contactForm.classList.remove('active');
+}
 
 
 /*setting up an event listener that triggers whenever the user scrolls the window*/
