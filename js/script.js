@@ -9,6 +9,7 @@
   https://swiperjs.com/demos
   https://codesandbox.io/p/sandbox/mvjbdm?file=%2Findex.html&selection=%5B%7B"endColumn"%3A9%2C"endLineNumber"%3A78%2C"startColumn"%3A7%2C"startLineNumber"%3A75%7D%5D
   https://codesandbox.io/p/sandbox/fojg89?file=%2Findex.html
+  https://katedarroch.com/
   https://thecomicbookstore.in
   https://kingscomics.com
   https://cdnjs.com/libraries/font-awesome
@@ -76,7 +77,21 @@ document.querySelector('#close-login-btn').onclick = () =>{
             document.querySelector('.header .header-2').classList.remove('active'); 
         }
         /*This code used to apply or remove styling or behavior to the selected element based on the user's scrolling behavior after the page has finished loading.*/ 
+    
+    /* this part will link with the functions in website loader bellow*/
+    fadeOut();
     }
+
+
+/* website loader */
+function loader(){
+    document.querySelector('.loader-container').classList.add('active')
+}
+
+function fadeOut(){
+    setTimeout(loader, 4000);
+}
+
 
 /*book slider section*/
 /*swiper*/
@@ -120,7 +135,7 @@ var swiper = new Swiper(".featured-slider", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-    //will show a certain amount of products at a time on the shelf base on user's device screen resolution
+    //will show a certain amount of products at a time in the slider base on user's device screen resolution
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -149,7 +164,7 @@ var swiper = new Swiper(".arrivals-slider", {
         delay: 9500,
         disableOnInteraction:false
     },
-    //will show a certain amount of products at a time on the shelf base on user's device screen resolution
+    //will show a certain amount of products at a time in the slider base on user's device screen resolution
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -162,3 +177,59 @@ var swiper = new Swiper(".arrivals-slider", {
       },
     },
   });  
+
+
+/*Reviews slider section*/
+/*swiper*/
+var swiper = new Swiper(".reviews-slider", {
+    //let you loop througt the selected few of review infinitely
+    spaceBetween:10,
+    grabCursor:true,
+    loop:true,
+    centeredSlides:true,
+    //will automatically move from left to right well user doesn't interact with the slider 
+    autoplay:{
+        delay: 9500,
+        disableOnInteraction:false
+    },
+    //will show a certain amount of reviews at a time in the slider base on user's device screen resolution
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      }, 
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  }); 
+  
+
+/*Blogs slider section*/
+/*swiper*/
+var swiper = new Swiper(".blogs-slider", {
+    //let you loop througt the selected few of blogs infinitely
+    spaceBetween:10,
+    grabCursor:true,
+    loop:true,
+    centeredSlides:true,
+    //will automatically move from left to right well user doesn't interact with the slider 
+    autoplay:{
+        delay: 9500,
+        disableOnInteraction:false
+    },
+    //will show a certain amount of blogs at a time in the slider base on user's device screen resolution
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      }, 
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  }); 
