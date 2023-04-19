@@ -1028,7 +1028,39 @@ height: 3rem;
                 transform: scale(1.1);
             }
     
-  
+
+/*==================================================Book detail section========================================*/
+
+/*breadcrumb*/
+
+.breadcrumb{
+    margin-top: 1.171875rem;
+    margin-bottom: 1.171875rem;
+}
+
+    .breadcrumb nav{
+        font-size: 1.5rem;
+        color: var(--black);
+        font-weight: 1000;
+    }
+
+        .breadcrumb a{
+            font-size: 1.6rem;
+            color: var(--black);
+            font-weight:1000;
+        }
+
+            .breadcrumb a:hover{
+                color: var(--light-color);
+            }
+
+/*Book detail section*/
+
+
+
+
+
+
 
 
 
