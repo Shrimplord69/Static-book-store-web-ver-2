@@ -14,6 +14,7 @@
   https://kingscomics.com
   https://cdnjs.com/libraries/font-awesome
   https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#theprojectfolderstructure
+  https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#howtomakethescrolltotopbutton
 */
 /*=======================================================================================*/
 
@@ -247,6 +248,18 @@ var swiper = new Swiper(".blogs-slider", {
       },
     },
   }); 
+
+
+/* bottom to top button */
+const scrollUp = document.querySelector("#scroll-up");
+
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
 
 
 

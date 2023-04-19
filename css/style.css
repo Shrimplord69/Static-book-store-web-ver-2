@@ -14,6 +14,7 @@
   https://kingscomics.com
   https://cdnjs.com/libraries/font-awesome
   https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#theprojectfolderstructure
+  https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#howtomakethescrolltotopbutton
 */
 /*=======================================================================================*/
 
@@ -979,6 +980,20 @@ section{
     }
 }
     
+/*bottom to top button*/
+.scroll-up {
+    position: fixed;
+    right: 0.5%;
+    bottom: 6%;
+    cursor: pointer;
+  }
+  
+.up-arrow {
+width: 3rem;
+height: 3rem;
+}
+
+
 
 /*====================================Collection section=======================================*/
 
