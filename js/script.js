@@ -247,3 +247,34 @@ var swiper = new Swiper(".blogs-slider", {
       },
     },
   }); 
+
+
+
+/*===================================Collection section====================================*/
+
+/*new arrivals banner slider section*/
+/*swiper*/
+var swiper = new Swiper(".arrivals-banner-slider", {
+  //let you loop througt the selected few of review infinitely
+  spaceBetween:10,
+  grabCursor:true,
+  loop:true,
+  centeredSlides:true,
+  //will automatically move from left to right well user doesn't interact with the slider 
+  autoplay:{
+      delay: 9500,
+      disableOnInteraction:false
+  },
+  //will show a certain amount of reviews at a time in the slider base on user's device screen resolution
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1,
+    }, 
+    1024: {
+      slidesPerView: 1,
+    },
+  },
+}); 

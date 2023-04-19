@@ -20,28 +20,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static book store website</title>
+    <title>Collection</title>
 
-    <!--swiper link (thi will provide layout for books slider)-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+     <!--swiper link (thi will provide layout for books slider)-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     
-    <!-- font awesome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!--custom css file link -->
-    <link rel="stylesheet" href="css/style.css">
+     <!-- font awesome cdn link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+     <!--custom css file link -->
+     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
 
     <!--!NOTE! All of the 'fas fa-something' will turn itself into an icon base on it keyword since we use preset icon provided by cdnjs-->
 
     <!-- header section starts -->
-
     <header class="header">
         <!--Header 1-->
         <div class="header-1">
@@ -137,7 +137,7 @@
             <input type="submit" value="submit" class="btn"></input>
          </form>
 
-    </div>     
+    </div>
 
     <!--home section start-->
 
@@ -172,45 +172,6 @@
 
     <!--home section end-->
 
-    <!--icons section starts-->
-
-    <section class="icons-container">
-
-        <div class="icons">
-            <i class="fas fa-plane"></i>
-            <div class="contetn">
-                <h3>free shipping</h3>
-                <p>order over $100</p>
-            </div>
-        </div>
-
-        <div class="icons">
-            <i class="fas fa-lock"></i>
-            <div class="contetn">
-                <h3>secure payment</h3>
-                <p>100 secure payment</p>
-            </div>
-        </div>
-        
-        <div class="icons">
-            <i class="fas fa-redo-alt"></i>
-            <div class="contetn">
-                <h3>easy returns</h3>
-                <p>10 days returns</p>
-            </div>
-        </div>
-
-        <div class="icons">
-            <i class="fas fa-headset"></i>
-            <div class="contetn">
-                <h3>24/7 support</h3>
-                <p>call us anytime</p>
-            </div>
-        </div>
-
-    </section>
-
-    <!--icons section starts-->
 
     <!--featured section starts-->
 
@@ -239,7 +200,7 @@
 
                     <div class="content">
                         <h3>Destiny Grimoire Anthology Volume I</h3>
-                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <div class="price">$17.99 <span>%25.00</span></div>
                         <a href="#" class="btn">add to cart</a>
                     </div>
 
@@ -363,25 +324,37 @@
 
     </section>
 
-    <!--featured section end-->
-
-    <!--newsletter section starts-->
-    <section class="newsletter">
-
-        <form action="">
-            <h3>subscribe for latest updates</h3>
-            <input type="email" name="" placeholder="enter your email here..." id="" class="box">
-            <input type="submit" value="subscribe" class="btn">
-        </form>
-
-    </section>
-
-
-    <!--newsletter section end-->
-
-    <!--Arrivals section starts-->
-
+    <!--New arrivals section starts-->
+    
     <section class="arrivals" id="arrivals">
+
+        <!--new arrivals banner-->
+        <div class="banner-container">
+
+            <div class="swiper arrivals-banner-slider">
+
+                <div class="swiper-wrapper">
+
+                    <!--theme 1-->
+                    <a href="#" class="swiper-slide box">
+                        <div class="image">
+                            <img src="images/bloodborne-banner.jpg.png" alt="">
+                        </div>
+                    </a>
+
+                    <!--theme 2-->
+                    <a href="#" class="swiper-slide box">
+                        <div class="image">
+                            <img src="images/berserk-banner.jpg.png" alt="">
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!--New arrival products slider-->
 
         <h1 class="heading">
             <span>new arrivals</span>
@@ -391,7 +364,7 @@
 
             <div class="swiper-wrapper">
 
-                <!--!Note! the <span> in <div class="price" will be the original price and outside of it will be reduct price, convinient for when you want to cross out the original price >-->
+                <!--!Note! the <span> in <div class="price" will be the original price and outside of it will be reduct price, convinient for when you want to crossout the original price>-->
                 <!--book 1-->
                 <a href="#" class="swiper-slide box">
                     <div class="image">
@@ -594,218 +567,12 @@
 
         </div>
 
-        <!--can add more books bellow(follow the layout !NOTE! a slider in this section will contain only 5 book every 5 books must be on a new slider )-->
 
     </section>
 
-    <!--Arrivals section end-->
+    <!--New arrivals section end-->
 
-    <!--Deal section start-->
-    
-    <section class="deal">
 
-        <div class="content">
-            <h3>deal of the day</h3>
-            <h1>upto 50% off</h1>
-            <p>something something something something something something something something something something something something</p>
-            <a href="#" class="btn">shop now</a>
-        </div>
-
-        <div class="image">
-            <img src="images/deal-img.jpg" alt="">
-        </div>
-
-    </section>
-
-    <!--Deal section end-->
-
-    <!--review section starts-->
-
-    <section class="reviews" id="reviews">
-
-        <h1 class="heading"> 
-            <span>client's reviews</span>
-        </h1>
-
-        <div class="swiper reviews-slider">
-
-            <div class="swiper-wrapper">
-
-                <!--person 1-->
-                <div class="swiper-slide box">
-                    <img src="images/pic-1.png.jpg" alt="">
-                    <h3>jonathan Benlolo</h3>
-                    <p>Books were dispatched quickly, and I was kept informed as to delivery dates and times etc. Very easy and convenient.</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-
-                <!--person 2-->
-                <div class="swiper-slide box">
-                    <img src="images/pic-2.png.jpg" alt="">
-                    <h3>Eu-meh Guang</h3>
-                    <p>excellent place to buy art and gifts, the best in Vietnam
-                        they also have amazing books and very good posters. </p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-
-                <!--person 3-->
-                <div class="swiper-slide box">
-                    <img src="images/pic-3.png.jpg" alt="">
-                    <h3>Felix Legyell</h3>
-                    <p>"Jam a Man of Fortune, and J must seek my Fortune - 𝐻𝑒𝓃𝓇𝓎 Æ𝓋𝑒𝓇𝒾𝑒𝓈, 𝟣𝟫𝟫𝟦"
-                        - Xqc. </p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-
-                <!--person 4-->
-                <div class="swiper-slide box">
-                    <img src="images/pic-4.png.jpg" alt="">
-                    <h3>Susan Boa</h3>
-                    <p>Love this online shop, easy to browse and prices are comparable to other online sellers and delivery is fast and efficient. </p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-
-                <!--person 5-->
-                <div class="swiper-slide box">
-                    <img src="images/pic-5.png.jpg" alt="">
-                    <h3>MR.B</h3>
-                    <p> These books truly blew my mind.</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-
-                <!--person 6-->
-                <div class="swiper-slide box">
-                    <img src="images/pic-6.png.jpg" alt="">
-                    <h3>Sarah Turner</h3>
-                    <p> To all customer who buying or borowing books at this book store, join us at the park, we are waiting for you. </p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--review section end-->
-
-    <!--blogs section starts-->
-
-    <section class="blogs" id="blogs">
-        
-        <h1 class="heading">
-            <span>our blogs</span>
-        </h1>
-
-        <div class="swiper blogs-slider">
-
-            <div class="swiper-wrapper">
-
-                <!--blog 1-->
-                <div class="swiper-slide box">
-                    <div class="image">
-                        <img src="images/blog-1.jpg.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Beware of the library stalker!</h3>
-                        <p>Many of our customer complaint about a woman who kept staring at them while they read book.</p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-                <!--blog 2-->
-                <div class="swiper-slide box">
-                    <div class="image">
-                        <img src="images/blog-2.jpg.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Tiny man spotted reading library's books without permit!</h3>
-                        <p>A tiny man spotted sneakily reading the library's book without permit. 
-                            we haven't found him ever since the incident said the employee. 
-                        </p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-                <!--blog 3-->
-                <div class="swiper-slide box">
-                    <div class="image">
-                        <img src="images/blog-3.jpg.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>customer hallucinating after reading some books!</h3>
-                        <p>A customer was seen walking around profusely then fall down and started kicking convulsively for a while. After sometime, he pass out and muttered something about knowledge overflow said our employee.</p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-                <!--blog 4-->
-                <div class="swiper-slide box">
-                    <div class="image">
-                        <img src="images/blog-4.jpg.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Safest place to read book ??!?</h3>
-                        <p>After the hallucinating incident, our library have not seen any customer read their book here though our customer flow have come in and out buying, borowing books have doudbled it amount ever since but not one want to read here. Some of our employee spotted the customers gather at the park and forming a huge circle with some weird drawing in the center to read book.              </p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-                <!--blog 5-->
-                <div class="swiper-slide box">
-                    <div class="image">
-                        <img src="images/blog-5.jpg.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Tiny man spotted once again!</h3>
-                        <p>After some time, our employee spotted the tiny man stading very still onto a tall stack of book while looking straight ahead into the dimmed lights far ahead, we don't know what he upto but at this point, we are too afraid to ask said our employee.</p>
-                        <a href="#" class="btn">read more</a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--blogs section end-->
 
     <!--footer section starts-->
 
@@ -870,6 +637,11 @@
 
     <!--footer section end-->
 
+
+
+
+
+
     <!--loader-->
 
     <div class="loader-container">
@@ -885,6 +657,7 @@
 
     <!--custom js file link -->
     <script src="js/script.js"></script>
+    
     
 </body>
 </html>

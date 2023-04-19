@@ -980,9 +980,40 @@ section{
 }
     
 
+/*====================================Collection section=======================================*/
 
+/*new arrivals section*/
+    /*new arrivals banner*/
+    
+   
 
-
+    .arrivals .arrivals-banner-slider .box{
+        margin: 2rem 0;    
+        border: var(--border);
+        
+    }  
+    
+        .arrivals .arrivals-banner-slider .box:hover{
+            border: var(--boder-hover);
+        }
+    
+        .arrivals .arrivals-banner-slider .box .image{
+            height: 25rem;
+            width: 100%;
+            overflow: hidden;
+        }
+    
+            .arrivals .arrivals-banner-slider .box .image img{
+                height: 100%;
+                width: 100%;
+                object-fit:fill;
+            }
+    
+            .arrivals .arrivals-banner-slider .box:hover .image{
+                transform: scale(1.1);
+            }
+    
+  
 
 
 
