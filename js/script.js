@@ -10,12 +10,11 @@
   https://codesandbox.io/p/sandbox/mvjbdm?file=%2Findex.html&selection=%5B%7B"endColumn"%3A9%2C"endLineNumber"%3A78%2C"startColumn"%3A7%2C"startLineNumber"%3A75%7D%5D
   https://codesandbox.io/p/sandbox/fojg89?file=%2Findex.html
   https://katedarroch.com/
-  https://thecomicbookstore.in
-  https://kingscomics.com
   https://cdnjs.com/libraries/font-awesome
   https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#theprojectfolderstructure
   https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#howtomakethescrolltotopbutton
   https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
+  https://stackoverflow.com/questions/66991577/how-do-i-make-a-gif-responsive
 */
 /*=======================================================================================*/
 
