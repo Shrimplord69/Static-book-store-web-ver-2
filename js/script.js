@@ -15,6 +15,7 @@
   https://cdnjs.com/libraries/font-awesome
   https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#theprojectfolderstructure
   https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#howtomakethescrolltotopbutton
+  https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
 */
 /*=======================================================================================*/
 
@@ -291,3 +292,53 @@ var swiper = new Swiper(".arrivals-banner-slider", {
     },
   },
 }); 
+
+
+
+/*===================================Book detail section====================================*/
+var ProductImg = document.getElementById("ProductImg");
+var SmallImg = document.getElementsByClassName("small-img");
+
+SmallImg[0].onclick = function(){
+  ProductImg.src = SmallImg[0].src;
+}
+
+SmallImg[1].onclick = function(){
+  ProductImg.src = SmallImg[1].src;
+}
+
+SmallImg[2].onclick = function(){
+  ProductImg.src = SmallImg[2].src;
+}
+
+SmallImg[3].onclick = function(){
+  ProductImg.src = SmallImg[3].src;
+}
+
+
+
+/* related products section */
+/*swiper*/
+var swiper = new Swiper(".related-slider", {
+  //let you loop througt the selected few of products infinitely
+  spaceBetween:10,
+  loop:true,
+  centeredSlides:true,
+  //will automatically move from left to right well user doesn't interact with the slider 
+  autoplay:{
+      delay: 9500,
+      disableOnInteraction:false
+  },
+  //will show a certain amount of products at a time in the slider base on user's device screen resolution
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    }, 
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});  

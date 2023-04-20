@@ -15,6 +15,7 @@
   https://cdnjs.com/libraries/font-awesome
   https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#theprojectfolderstructure
   https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#howtomakethescrolltotopbutton
+  https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
 */
 /*=======================================================================================*/
 
@@ -140,9 +141,11 @@ section{
             color: var(--black);
         }
 
+
             /*adjust the logo only*/
-            .header .header-1 .logo i{
-                color: var(--green);
+            .header .header-1 .logo img{
+                width: 70px;
+                height: 70px;
             }
 
         /*search section*/
@@ -1055,13 +1058,149 @@ height: 3rem;
             }
 
 /*Book detail section*/
+   
+    /*Book image adjust*/
+    .small-container_single-book{
+        max-width: 1000px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 20px;
 
+    }    
 
+    .row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
+    .single-book{
+        margin-top: 80px;
+    }
 
+    .small-img-row{
+        display: flex;
+        justify-content: space-around;
+    }
 
+    .col-2 img{
+        max-width: 100%;
+        padding: 50px 0;
+    }
 
+    .small-img-col{
+        flex-basis: 24%;
+        cursor: pointer;
+    }
 
+    .small-img-col:hover{
+        transform: scale(.9);
+    }
+
+    .single-book .col-2 img{
+        padding: 0;
+    }
+
+    .single-book .col-2{
+        padding:20px;
+    }
+
+    /*Book info & interaction adjust*/
+    .col-2{
+        flex-basis: 50%;
+        min-width: 300px;
+        
+    }
+
+    /*book name*/
+    .col-2 h1{
+        font-size: 50px;
+        line-height: 60px;
+        margin: 25px 0;
+    }
+
+    /*book price*/
+    .single-book h4{
+        
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .price{
+        font-size: 20px;
+        color: var(--light-color);
+    }
+
+    .price span{
+        font-size: 15px;
+        text-decoration: line-through;
+    }
+
+    /*the number of book customer wish to purchase*/
+    .single-book input{
+        width: 150px;
+        height: 50px;
+        padding-left: 10px;
+        font-size: 20px;
+        text-align: center;
+        margin-right: 10px;
+        border: var(--border);
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+    p{
+        color: var(--light-color);
+        font-size: 15px;
+    }
+
+    /*book description header*/
+    .single-book h3{
+        font-size: 20px;
+    }
+
+/*related section*/
+.related .related-slider .box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    border: var(--border);
+    margin: 1rem 0;
+}
+
+    .related .related-slider .box:hover{
+        border: var(--border-hover);
+    }
+
+        .related .related-slider .box .image img{
+            height: 15rem;
+        }
+
+        .related .related-slider .box .content h3{
+        font-size: 2rem;
+        color:var(--black);
+    }
+
+    .related .related-slider .box .content .price{
+        font-size: 2.2rem;
+        color: var(--black);
+        padding-bottom: .5rem;
+    }  
+    
+        .related .related-slider .box .content .price span{
+            font-size: 1.5rem;
+            color: var(--light-color);
+            text-decoration: line-through;
+        }
+
+        .related .related-slider .box .content .stars i{
+            font-size: 1.5rem;
+            color: var(--green);
+        }
 
 
 
