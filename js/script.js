@@ -15,6 +15,7 @@
   https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#howtomakethescrolltotopbutton
   https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
   https://stackoverflow.com/questions/66991577/how-do-i-make-a-gif-responsive
+  https://alvarotrigo.com/blog/hamburger-menu-css-responsive/#:~:text=Making%20the%20Hamburger%20Menu%20Responsive%20with%20CSS&text=And%20we%20also%20need%20to,will%20be%20hidden%20by%20default.
 */
 /*=======================================================================================*/
 

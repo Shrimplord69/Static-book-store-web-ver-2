@@ -15,6 +15,7 @@
   https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#howtomakethescrolltotopbutton
   https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
   https://stackoverflow.com/questions/66991577/how-do-i-make-a-gif-responsive
+  https://alvarotrigo.com/blog/hamburger-menu-css-responsive/#:~:text=Making%20the%20Hamburger%20Menu%20Responsive%20with%20CSS&text=And%20we%20also%20need%20to,will%20be%20hidden%20by%20default.
 -->
 <!--====================================================================================-->
 
@@ -640,8 +641,41 @@
 
 
 
+    <!--burger menu for categories-->
+    <div class="burger-menu">
+        <input type="checkbox" id="burger">
+        <label for="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav>
+          <ul>
 
+            <!--price section-->
+            <li>
+                <div class="heading" style="display: block;">
+                    <span>Price, $</span>
+                </div>
+                <ul class="product-filter-list" style="display: block;">
+                    <li>
+                        <div class="price-range">
+                            <!--min price input (cannot go bellow $0)-->
+                            <input type="number" class="price-range-min" placeholder="Min" style="display: block;" min="0" oninput="validity.valid || (value='');">
+                            <!--divider -->
+                            <span class="range-divider" > - </span>
+                            <!--max price input (cannot go bellow $0)-->
+                            <input type="number" class="price-range-max" placeholder="Max" style="display: block;" min="1" oninput="validity.valid || (value='');">
+                        </div>
+                    </li>
+                </ul>
+            </li>
 
+          </ul>
+        </nav>
+      </div>
+    
+   
 
     <!--loader-->
 
@@ -661,7 +695,21 @@
 
     <!--custom js file link -->
     <script src="js/script.js"></script>
+
+
+
+
+
+    <!--Test section-->
+    
+   
+      
+
     
     
 </body>
 </html>
+
+
+
+

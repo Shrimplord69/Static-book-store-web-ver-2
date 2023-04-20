@@ -15,6 +15,7 @@
   https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#howtomakethescrolltotopbutton
   https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number\
   https://stackoverflow.com/questions/66991577/how-do-i-make-a-gif-responsive
+  https://alvarotrigo.com/blog/hamburger-menu-css-responsive/#:~:text=Making%20the%20Hamburger%20Menu%20Responsive%20with%20CSS&text=And%20we%20also%20need%20to,will%20be%20hidden%20by%20default.
 */
 /*=======================================================================================*/
 
@@ -974,6 +975,16 @@ section{
     }
 
 }
+
+/*burger menu*/
+@media screen and (max-width: 750px) {
+    #main-menu {
+      display: none;
+    }
+    #hamburger-menu {
+      display: inline;
+    }
+  }
   
 @media (max-width:450px){
 
@@ -1030,6 +1041,189 @@ height: 3rem;
                 transform: scale(1.1);
             }
     
+
+
+/*burger menu for categories*/
+
+/*adjust green box*/
+.burger-menu {
+    position: fixed;
+    top: 161px;
+    left: 0;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: var(--green);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /*green box when hover*/
+  .burger-menu:hover {
+    background-color: var(--dark-color);
+  }
+  
+  .burger-menu input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* adjust black line inside the box*/
+  .burger-menu label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position:absolute;
+    top: 25px;
+    left: 15px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  /*adjust the animation of the black line inside the box*/
+  .burger-menu label span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--black);
+    position: relative;
+    transform-origin: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .burger-menu label span:first-child {
+    transform-origin: 0 0;
+  }
+  
+  .burger-menu label span:last-child {
+    transform-origin: 0 100%;
+  }
+  
+  /*the arrow animation inside the form when opened*/
+  .burger-menu input[type="checkbox"]:checked ~ label span {
+    background-color: var(--green);
+  }
+
+  /*colored the arrow animation inside the form which opened when hovered*/
+  .burger-menu input[type="checkbox"]:checked ~ label span:hover {
+    background-color: var(--dark-color);
+  }
+  
+  /*since this is 2 line formed together so the color when hover will be seperate*/
+  /*upper part*/
+  .burger-menu input[type="checkbox"]:checked ~ label span:first-child {
+    transform: rotate(45deg);
+  }
+  /*lower part*/
+  .burger-menu input[type="checkbox"]:checked ~ label span:last-child {
+    transform: rotate(-45deg);
+  }
+  
+  /*this is the area to close the menu*/ 
+  .burger-menu input[type="checkbox"]:checked ~ label span:nth-child(2) {
+    transform: scale(0);
+  }
+  
+  /*this is the whole menu bar which hided in the left, outside of the website*/
+  .burger-menu nav {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    width: 300px;
+    background-color: whitesmoke;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+  }
+  
+  .burger-menu input[type="checkbox"]:checked ~ nav {
+    left: 0;
+  }
+  
+  .burger-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*adjust the space between section in the menu*/
+  .burger-menu ul li {
+    margin-bottom: 20px;
+  }
+  
+  /*adjust the content inside menu*/
+  .burger-menu ul li a {
+    display: block;
+    color: var(--black);
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /*colored the content of the menu when hover*/
+  .burger-menu ul li a:hover {
+    color: var(--light-color);
+  }
+
+
+  /**/
+  .burger-menu .product-filter-list{
+    display: block;
+    position: relative;
+    font-size: 13px;
+    font-weight: normal;
+    list-style: none;
+    margin: 0 0 10px 0;
+    max-height: 215px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 10px 0 10px;
+  }
+
+
+
+  /*menu price section*/
+  
+  .burger-menu .price-section span{
+    font-size: 20px;
+    cursor:context-menu;
+  }
+
+    /*input prices*/
+        /*Min & Max*/
+        .burger-menu .product-filter-list .price-range .price-range-min,
+        .burger-menu .product-filter-list .price-range .price-range-max{
+            display: inline-block;
+            width: 46%;
+            min-width: auto;
+            padding: 0 5px;
+            height: 28px;
+            vertical-align: middle;
+            outline: 0;
+            border: var(--border);
+            background-color: #fff;
+            box-shadow: none;
+            box-sizing: border-box;
+            color: var(--light-color);
+            float: none;
+            margin: 0;
+            min-height: auto;
+        }
+
+        /*divider*/
+        .burger-menu .product-filter-list .price-range .range-divider{
+            display: inline-block;
+            width: 8%;
+            color: #a3a3a3;
+            padding: 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+
+
+
+
 
 /*==================================================Book detail section========================================*/
 
