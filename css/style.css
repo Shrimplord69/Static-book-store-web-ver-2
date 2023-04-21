@@ -1483,12 +1483,48 @@ height: 3rem;
         }
 
 
+/*contact us form*/
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
 
+  main form label span{
+    font-size: 20px;
+  }
 
-
-
-
-
+  
+  form .form-input,
+  form select,
+  form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+  }
+  
+  form input[type="checkbox"],
+  form input[type="radio"] {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  
 
 
 

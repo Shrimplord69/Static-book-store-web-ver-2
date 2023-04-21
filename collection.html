@@ -78,6 +78,7 @@
                 <a href="index.html">reviews</a>
                 <a href="index.html">blogs</a>
                 <a href="collection.html">collection</a>
+                <a href="contact.html">contact us</a>
             </nav>
         </div>
 
@@ -93,6 +94,7 @@
         <a href="index.html" class="fas fa-comments"></a>
         <a href="index.html" class="fas fa-blog"></a>
         <a href="collection.html" class="fas fa-book"></a>
+        <a href="contact.html" class="fas fa-headset"></a>
     </nav>
 
     <!--login form-->
@@ -122,21 +124,41 @@
     <!--contact form-->
     <div class="contact-form-container">
 
-         <!--close login form button -->
+         <!--close contact form button -->
          <div id="close-contact-btn" class="fas fa-times"></div>
 
          <!--contact form section-->
          <form action="">
+            <!--header-->
             <h3>contact us</h3>
+            <!--name-->
             <span>name</span>
             <input type="text" name="" class="box" placeholder="enter your full name here..." id="" required>
+            <!--email-->
             <span>email</span>
             <input type="email" name="" class="box" placeholder="enter your email here..." id="" required>
+            <!--phone-->
+            <span>phone</span>
+            <input type="number" name="" class="box" placeholder="enter your phone number here..." id="" required>
+            <!--preferred contact method-->
+            <span>preferred contact method</span>
+            <input type="checkbox" name="" value="email" checked> By email
+            <br>
+            <input type="checkbox"name="" value="phone" > By phone
+            <!--Receive weekly newsletter-->
+            <span>Receive weekly newsletter</span>
+            <input type="radio" name="newsletter" value="yes" checked> Yes
+            <input type="radio" name="newsletter" value="no"> No
+            <!--subject-->
             <span>subject</span>
             <input type="text" name="" class="box" placeholder="enter your subject here..." id="" required>
+            <!--message-->
             <span>message</span>
             <input type="text" name="" class="box" placeholder="enter it more detailed here..." id="" required>
-            <input type="submit" value="submit" class="btn"></input>
+            <!--submit button-->
+            <input type="submit" value="submit" class="btn">
+            <!--reset button-->
+            <input type="reset" value="reset" class="btn-r">
          </form>
 
     </div>

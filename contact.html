@@ -1,0 +1,232 @@
+<!--====================================================================================-->
+<!--RMIT University Vietnam
+  Course: COSC2430 Web Programming
+  Semester: 2023A
+  Assessment: Assignment 1
+  Author: Your names (e.g. Nguyen Van Minh)
+  ID: Your student ids (e.g. 1234567)
+  Acknowledgement:
+  https://swiperjs.com/demos
+  https://codesandbox.io/p/sandbox/mvjbdm?file=%2Findex.html&selection=%5B%7B"endColumn"%3A9%2C"endLineNumber"%3A78%2C"startColumn"%3A7%2C"startLineNumber"%3A75%7D%5D
+  https://codesandbox.io/p/sandbox/fojg89?file=%2Findex.html
+  https://katedarroch.com/
+  https://cdnjs.com/libraries/font-awesome
+  https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#theprojectfolderstructure
+  https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#howtomakethescrolltotopbutton
+  https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
+  https://stackoverflow.com/questions/66991577/how-do-i-make-a-gif-responsive
+  https://alvarotrigo.com/blog/hamburger-menu-css-responsive/#:~:text=Making%20the%20Hamburger%20Menu%20Responsive%20with%20CSS&text=And%20we%20also%20need%20to,will%20be%20hidden%20by%20default.
+-->
+<!--====================================================================================-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepegabookstore.coom/contact-us</title>
+
+    <!--swiper link (thi will provide layout for books slider)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <!--!NOTE! All of the 'fas fa-something' will turn itself into an icon base on it keyword since we use preset icon provided by cdnjs-->
+
+    <!-- header section starts -->
+
+    <header class="header">
+        <!--Header 1-->
+        <div class="header-1">
+            <!--logo and store name-->
+            <a href="#" class="logo">
+                <img src="images/logo-img.gif" alt="logo-image">
+                Pepega book store
+            </a>
+
+            <!--search section-->
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="what are you looking for?" id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+            <!--Icons(heart, cart, account, contact)-->
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
+        </div>
+
+        <!--Header 2-->
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="collection.html">featured</a>
+                <a href="collection.html">arrivals</a>
+                <a href="index.html">reviews</a>
+                <a href="index.html">blogs</a>
+                <a href="collection.html">collection</a>
+                <a href="contact.html">contact us</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <!--header section ends -->
+
+    <!--bottom navbar-->
+    <nav class="bottom-navbar">
+        <a href="index.html" class="fas fa-home"></a>
+        <a href="collection.html" class="fas fa-list"></a>
+        <a href="collection.html" class="fas fa-tags"></a>
+        <a href="index.html" class="fas fa-comments"></a>
+        <a href="index.html" class="fas fa-blog"></a>
+        <a href="collection.html" class="fas fa-book"></a>
+        <a href="contact.html" class="fas fa-headset"></a>
+    </nav>
+
+    <!--login form-->
+    <div class="login-form-container">
+
+        <!--close login form button -->
+        <div id="close-login-btn" class="fas fa-times"></div>
+
+        <!--login form section-->
+        <form action="">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" name="" class="box" placeholder="enter your email" id="">
+            <span>password</span>
+            <input type="password" name="" class="box" placeholder="enter your password" id="">
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn">
+            <p>forget password ? <a href="#">click here</a></p>
+            <p>don't have an account ?<a href="#">create one</a></p>
+        </form>
+
+    </div>
+
+
+    <!--contact form-->
+    <main>
+        <h1 class="contact-header">Contact Us</h1>
+        <form class="contact-form">
+          <label for="contact-purpose"><span>Contact Purpose</span></label>
+          <select id="contact-purpose" name="contact-purpose">
+            <option value="sell">I want to sell books</option>
+            <option value="buy">I want to buy books</option>
+          </select>
+    
+          <label for="name"><span>Name</span></label>
+          <input class="form-input" id="name" type="text" name="name" required>
+    
+          <label for="email"><span>Email</span></label>
+          <input class="form-input" id="email" type="email" name="email" required>
+    
+          <label for="phone"><span>Phone</span></label>
+          <input class="form-input" id="phone" type="tel" name="phone" required>
+    
+          <label><span>Preferred Contact Method</span></label>
+          <input type="checkbox" name="contact-method" value="email" checked> By email
+          <br>
+          <input type="checkbox" name="contact-method" value="phone"> By phone
+    
+          <label><span>Receive Weekly Newsletter</span></label>
+          <input type="radio" name="newsletter" value="yes" checked> Yes
+          <br>
+          <input type="radio" name="newsletter" value="no"> No
+    
+          <label for="extra-notes">Extra Notes</label>
+          <textarea id="extra-notes" name="extra-notes"></textarea>
+    
+          <input type="Submit" value="submit" class="btn">
+          <input type="reset" value="reset" class="btn-r">
+        </form>
+      </main>
+
+
+
+
+<!--footer section starts-->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <!--Our location-->
+        <div class="box">
+            <h3>our locations</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> vietnam </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> france </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> japan </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> singapore </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> canada </a>
+        </div>
+
+        <!--quick link-->
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="featured"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="#arrivals"> <i class="fas fa-arrow-right"></i> arrivals </a>
+            <a href="#reviews"> <i class="fas fa-arrow-right"></i> reviews </a>
+            <a href="#blogs"> <i class="fas fa-arrow-right"></i> blogs </a>
+            <a href="collection.html"> <i class="fas fa-arrow-right"></i> collection </a>
+        </div>
+
+        <!--extra link-->
+        <div class="box">
+            <h3>Information</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> account info </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> ordered items </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> privacy policy </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> payment method </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> our services </a>
+        </div>
+
+        <!--extra link-->
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> s3938143@rmit.edu.vn </a>
+            <img src="images/worldmap.png.png" class="map" alt="">
+        </div>
+
+    </div>
+
+    <!--footer social media section-->
+    <div class="share">
+        <a href="https://www.facebook.com" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com" class="fab fa-linkedin"></a>
+    </div>
+
+    <div class="credit"> created by <span>MR.B</span> </div>
+
+</section>
+
+    
+    <!--swiper link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--custom js file link -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
+
+
