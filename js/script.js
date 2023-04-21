@@ -296,10 +296,18 @@ var swiper = new Swiper(".arrivals-banner-slider", {
 
 
 /*===================================Book detail section====================================*/
+/*This will allow user to view product's images in the section under it */
+
+/*This line selects the element with the ID ProductImg and assigns it to a variable called ProductImg.*/
 var ProductImg = document.getElementById("ProductImg");
+
+/*This line selects all elements with the class name small-img and assigns them to a variable called SmallImg. This creates an array-like object containing all the selected elements.*/
 var SmallImg = document.getElementsByClassName("small-img");
 
+/*This line sets up a click event listener on the first element in the SmallImg array, which is accessed using the index [0]. When this element is clicked, the code inside the function will execute.*/
 SmallImg[0].onclick = function(){
+
+  /*This line sets the src attribute of the ProductImg element to the src attribute of the first element in the SmallImg array, which is accessed using the index [0]. This changes the displayed image to the one that was clicked.*/
   ProductImg.src = SmallImg[0].src;
 }
 

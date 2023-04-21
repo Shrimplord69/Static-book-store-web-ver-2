@@ -120,6 +120,23 @@ section{
         background: var(--dark-color);
     }
 
+        /*button reset*/
+        .btn-r{
+            margin-top: 1rem;
+            display: inline-block;
+            padding: .9rem 3rem;
+            border-radius: .5rem;
+            color: #fff;
+            background: red;
+            font-size: 1.7rem;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+            /* colored button when hover over*/
+            .btn-r:hover{
+                background: darkred;
+            }
 
 /*Header*/
 
@@ -689,6 +706,21 @@ section{
         }
 
 /*deal section*/
+/*video background*/
+.video-banner{
+    height: 100vh;
+    position:relative;
+}
+
+video{
+    object-fit: cover;
+    position:relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
 .deal{
     background: #f3f3f3;
     display: flex;
@@ -807,6 +839,10 @@ section{
         }
 
 /*footer section*/
+.footer{
+    background-color: whitesmoke;
+}
+
 .footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -894,6 +930,8 @@ section{
         height: 25rem;
     }
 
+
+
 /*media queries*/
 /*adjust sizes of sections base on user's screen*/
 @media (max-width:991px){
@@ -976,6 +1014,10 @@ section{
 
 }
 
+
+
+
+
 /*burger menu*/
 @media screen and (max-width: 750px) {
     #main-menu {
@@ -1040,7 +1082,47 @@ height: 3rem;
             .arrivals .arrivals-banner-slider .box:hover .image{
                 transform: scale(1.1);
             }
+   
+            
+/*All book section*/
+.all-book .all-book-container .box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    border: var(--border);
+    margin: 1rem 0;
+}
+
+    .all-book .all-book-container .box:hover{
+        border: var(--border-hover);
+    }
+
+        .all-book .all-book-container .box .image img{
+            height: 15rem;
+        }
+
+    .all-book .all-book-container .box .content h3{
+        font-size: 2rem;
+        color:var(--black);
+    }
+
+    .all-book .all-book-container .box .content .price{
+        font-size: 2.2rem;
+        color: var(--black);
+        padding-bottom: .5rem;
+    }  
     
+        .all-book .all-book-container .box .content .price span{
+            font-size: 1.5rem;
+            color: var(--light-color);
+            text-decoration: line-through;
+        }
+
+        .all-book .all-book-container .box .content .stars i{
+            font-size: 1.5rem;
+            color: var(--green);
+        }
 
 
 /*burger menu for categories*/

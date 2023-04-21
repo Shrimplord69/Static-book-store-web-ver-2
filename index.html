@@ -127,16 +127,36 @@
 
          <!--contact form section-->
          <form action="">
+            <!--header-->
             <h3>contact us</h3>
+            <!--name-->
             <span>name</span>
             <input type="text" name="" class="box" placeholder="enter your full name here..." id="" required>
+            <!--email-->
             <span>email</span>
             <input type="email" name="" class="box" placeholder="enter your email here..." id="" required>
+            <!--phone-->
+            <span>phone</span>
+            <input type="number" name="" class="box" placeholder="enter your phone number here..." id="" required>
+            <!--preferred contact method-->
+            <span>preferred contact method</span>
+            <input type="checkbox" name="" value="email" checked> By email
+            <br>
+            <input type="checkbox"name="" value="phone" > By phone
+            <!--Receive weekly newsletter-->
+            <span>Receive weekly newsletter</span>
+            <input type="radio" name="newsletter" value="yes" checked> Yes
+            <input type="radio" name="newsletter" value="no"> No
+            <!--subject-->
             <span>subject</span>
             <input type="text" name="" class="box" placeholder="enter your subject here..." id="" required>
+            <!--message-->
             <span>message</span>
             <input type="text" name="" class="box" placeholder="enter it more detailed here..." id="" required>
-            <input type="submit" value="submit" class="btn"></input>
+            <!--submit button-->
+            <input type="submit" value="submit" class="btn">
+            <!--reset button-->
+            <input type="reset" value="reset" class="btn-r">
          </form>
 
     </div>     
@@ -609,13 +629,20 @@
         <div class="content">
             <h3>deal of the day</h3>
             <h1>upto 50% off</h1>
-            <p>something something something something something something something something something something something something</p>
+            <p>To celebrate one of our employees found this cool spot, we have drop some special offer of specific books</p>
             <a href="collection.html" class="btn">shop now</a>
         </div>
 
-        <div class="image">
-            <img src="images/deal-img.jpg" alt="">
+        <div class="video-banner">
+            <video autoplay muted loop id="myVideo">
+                <source src="videos/video-banner-2.mp4" type="video/mp4">
+            </video>
         </div>
+
+        <!--can swap back to the still image in case of one changed mind-->
+        <!--<div class="image">
+            <img src="images/deal-img.jpg" alt="">
+        </div>-->
 
     </section>
 
@@ -726,6 +753,10 @@
     </section>
 
     <!--review section end-->
+
+
+
+
 
     <!--blogs section starts-->
 
