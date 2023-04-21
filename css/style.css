@@ -1302,7 +1302,11 @@ height: 3rem;
             vertical-align: middle;
         }
 
-
+    /*menu categories section*/
+    /*at this point use for other section too, act as the font size*/
+    .burger-menu .categories-filter-list li span{
+        font-size: 20px;
+    }
 
 
 
