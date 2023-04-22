@@ -3,8 +3,8 @@
   Course: COSC2430 Web Programming
   Semester: 2023A
   Assessment: Assignment 1
-  Author: Your names (e.g. Nguyen Van Minh)
-  ID: Your student ids (e.g. 1234567)
+  Author: Nguyen Gia Bao
+  ID: s3938143
   Acknowledgement:
   https://swiperjs.com/demos
   https://codesandbox.io/p/sandbox/mvjbdm?file=%2Findex.html&selection=%5B%7B"endColumn"%3A9%2C"endLineNumber"%3A78%2C"startColumn"%3A7%2C"startLineNumber"%3A75%7D%5D
