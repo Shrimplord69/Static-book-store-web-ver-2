@@ -1571,6 +1571,10 @@ td a{
     color: var(--green);
 }
 
+td a:hover{
+    color: var(--dark-color);
+}
+
 td img{
     width: 200px;
     height: 240px;
@@ -1596,5 +1600,14 @@ th:last-child{
     text-align: right;
 }
 
+.check-out-button {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.check-out-button input{
+    text-align: center;
+}
 
 /*!Testing section!*/
