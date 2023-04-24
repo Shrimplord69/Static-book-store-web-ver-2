@@ -1,0 +1,737 @@
+<!--====================================================================================-->
+<!--RMIT University Vietnam
+  Course: COSC2430 Web Programming
+  Semester: 2023A
+  Assessment: Assignment 1
+  Author: Nguyen Gia Bao
+  ID: s3938143
+  Acknowledgement:
+  https://swiperjs.com/demos
+  https://codesandbox.io/p/sandbox/mvjbdm?file=%2Findex.html&selection=%5B%7B"endColumn"%3A9%2C"endLineNumber"%3A78%2C"startColumn"%3A7%2C"startLineNumber"%3A75%7D%5D
+  https://codesandbox.io/p/sandbox/fojg89?file=%2Findex.html
+  https://katedarroch.com/
+  https://cdnjs.com/libraries/font-awesome
+  https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#theprojectfolderstructure
+  https://www.freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/#howtomakethescrolltotopbutton
+  https://stackoverflow.com/questions/31575496/prevent-negative-inputs-in-form-input-type-number
+  https://stackoverflow.com/questions/66991577/how-do-i-make-a-gif-responsive
+  https://alvarotrigo.com/blog/hamburger-menu-css-responsive/#:~:text=Making%20the%20Hamburger%20Menu%20Responsive%20with%20CSS&text=And%20we%20also%20need%20to,will%20be%20hidden%20by%20default.
+-->
+<!--====================================================================================-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepegabookstore.coom/categories-1</title>
+
+    <!--swiper link (thi will provide layout for books slider)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!--!NOTE! All of the 'fas fa-something' will turn itself into an icon base on it keyword since we use preset icon provided by cdnjs-->
+
+    <!-- header section starts -->
+    <header class="header">
+        <!--Header 1-->
+        <div class="header-1">
+            <!--logo and store name-->
+            <a href="#" class="logo">
+                <img src="images/logo-img.gif" alt="pepega reading book">
+                Pepega book store
+            </a>
+
+            <!--search section-->
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="what are you looking for?" id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+            <!--Icons(heart, cart, account, contact)-->
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="cart.html" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+                <div id="contact-btn" class="fas fa-headset"></div>
+            </div>
+        </div>
+
+        <!--Header 2-->
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="#featured">featured</a>
+                <a href="#arrivals">arrivals</a>
+                <a href="index.html">reviews</a>
+                <a href="index.html">blogs</a>
+                <a href="collection.html">collection</a>
+                <a href="contact.html">contact us</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <!--header section ends -->
+
+    <!--bottom navbar-->
+    <nav class="bottom-navbar">
+        <a href="index.html" class="fas fa-home"></a>
+        <a href="#featured" class="fas fa-list"></a>
+        <a href="#arrivals" class="fas fa-tags"></a>
+        <a href="index.html" class="fas fa-comments"></a>
+        <a href="index.html" class="fas fa-blog"></a>
+        <a href="collection.html" class="fas fa-book"></a>
+        <a href="contact.html" class="fas fa-headset"></a>
+    </nav>
+
+    <!--login form-->
+    <div class="login-form-container">
+
+        <!--close login form button -->
+        <div id="close-login-btn" class="fas fa-times"></div>
+
+        <!--login form section-->
+        <form action="">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" name="" class="box" placeholder="enter your email" id="">
+            <span>password</span>
+            <input type="password" name="" class="box" placeholder="enter your password" id="">
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn">
+            <p>forget password ? <a href="#">click here</a></p>
+            <p>don't have an account ?<a href="#">create one</a></p>
+        </form>
+
+    </div>
+
+    <!--contact form-->
+    <div class="contact-form-container">
+
+         <!--close contact form button -->
+         <div id="close-contact-btn" class="fas fa-times"></div>
+
+         <!--contact form section-->
+         <form action="">
+            <!--header-->
+            <h3>contact us</h3>
+            <!--name-->
+            <span>name</span>
+            <input type="text" name="" class="box" placeholder="enter your full name here..." id="" required>
+            <!--email-->
+            <span>email</span>
+            <input type="email" name="" class="box" placeholder="enter your email here..." id="" required>
+            <!--phone-->
+            <span>phone</span>
+            <input type="number" name="" class="box" placeholder="enter your phone number here..." id="" required>
+            <!--preferred contact method-->
+            <span>preferred contact method</span>
+            <input type="checkbox" name="" value="email" checked> By email
+            <br>
+            <input type="checkbox"name="" value="phone" > By phone
+            <!--Receive weekly newsletter-->
+            <span>Receive weekly newsletter</span>
+            <input type="radio" name="newsletter" value="yes" checked> Yes
+            <input type="radio" name="newsletter" value="no"> No
+            <!--subject-->
+            <span>subject</span>
+            <input type="text" name="" class="box" placeholder="enter your subject here..." id="" required>
+            <!--message-->
+            <span>message</span>
+            <input type="text" name="" class="box" placeholder="enter it more detailed here..." id="" required>
+            <!--submit button-->
+            <input type="submit" value="submit" class="btn">
+            <!--reset button-->
+            <input type="reset" value="reset" class="btn-r">
+         </form>
+
+    </div>
+
+    <!--home section start-->
+
+    <section class="home" id="home">
+
+        <div class="row">
+
+            <div class="content">
+                <h3>special offer upto 50% off</h3>
+                <p>The Destiny Grimoire Anthology weaves tales from multiple sources together for the first time, casting new light on Destiny’s most legendary heroes, infamous villains, and their greatest moments of triumph and tragedy.</p>
+                <a href="books-detail.html" class="btn">shop now</a>
+            </div>
+            
+            <!--book slider (using swiper extention)-->
+            <div class="swiper books-slider">
+                <div class="swiper-wrapper">
+                    <a href="books-detail.html" class="swiper-slide"><img src="images/book-1.png" alt="Destiny-Grimoire-Anthology-Volume-I"></a>
+                    <a href="books-detail.html" class="swiper-slide"><img src="images/book-2.png" alt="Destiny-Grimoire-Anthology-Volume-II"></a>
+                    <a href="books-detail.html" class="swiper-slide"><img src="images/book-3.png" alt="Destiny-Grimoire-Anthology-Volume-III"></a>
+                    <a href="books-detail.html" class="swiper-slide"><img src="images/book-4.png" alt="Destiny-Grimoire-Anthology-Volume-IV"></a>
+                    <a href="books-detail.html" class="swiper-slide"><img src="images/book-5.png" alt="Destiny-Grimoire-Anthology-Volume-V"></a>
+                    <a href="books-detail.html" class="swiper-slide"><img src="images/book-6.png" alt="Destiny Comic Collection"></a>
+                    <!--Add more books for the special offer section bellow-->
+
+                </div>
+                <img src="images/stand.png.png" class="stand" alt="white-book-stand">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--home section end-->
+    
+    <!--sub-categories-1 starts-->
+
+    <section class="featured" id="featured">
+
+        <h1 class="heading">
+            <span>fantasy</span>
+        </h1>
+
+        <div class="swiper featured-slider">
+
+            <div class="swiper-wrapper">
+
+                <!--section for book 1-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-1.png" alt="Destiny Grimoire Anthology Volume I">
+                    </div>
+
+                    <div class="content">
+                        <h3>Destiny Grimoire Anthology Volume I</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 2-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-2.png" alt="Destiny Grimoire Anthology Volume II">
+                    </div>
+
+                    <div class="content">
+                        <h3>Destiny Grimoire Anthology Volume II</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 3-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-3.png" alt="Destiny Grimoire Anthology Volume III">
+                    </div>
+
+                    <div class="content">
+                        <h3>Destiny Grimoire Anthology Volume III</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 4-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-4.png" alt="Destiny Grimoire Anthology Volume IV">
+                    </div>
+
+                    <div class="content">
+                        <h3>Destiny Grimoire Anthology Volume IV</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 5-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-5.png" alt="Destiny Grimoire Anthology Volume V">
+                    </div>
+
+                    <div class="content">
+                        <h3>Destiny Grimoire Anthology Volume V</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 6-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-6.png" alt="Destiny Comic Collection">
+                    </div>
+
+                    <div class="content">
+                        <h3>Destiny Comic Collection</h3>
+                        <div class="price">$15.00 <span>$20.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--add more book bellow (follow the format)-->
+
+                <!---->
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+
+    <!--sub-categories-1 end-->
+
+
+    <!--sub-categories-2 starts-->
+
+    <section class="featured" id="featured">
+
+        <h1 class="heading">
+            <span>horror</span>
+        </h1>
+
+        <div class="swiper featured-slider">
+
+            <div class="swiper-wrapper">
+
+                <!--section for book 1-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-7.png" alt="Bloodborne Vol. 1: The Death of Sleep">
+                    </div>
+
+                    <div class="content">
+                        <h3>Bloodborne Vol. 1: The Death of Sleep</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 2-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-8.png" alt="Bloodborne Vol. 2: The Veil, Torn Asunder">
+                    </div>
+
+                    <div class="content">
+                        <h3>Bloodborne Vol. 2: The Veil, Torn Asunder</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 3-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-9.png" alt="Bloodborne Vol. 3: A Song of Crows">
+                    </div>
+
+                    <div class="content">
+                        <h3>Bloodborne Vol. 3: A Song of Crows</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 4-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-10.png" alt="Bloodborne Vol. 4: Lady of the Lanterns">
+                    </div>
+
+                    <div class="content">
+                        <h3>Bloodborne Vol. 4: Lady of the Lanterns</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 5-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-11.jpg" alt="Destiny Grimoire Anthology Volume V">
+                    </div>
+
+                    <div class="content">
+                        <h3>Bloodborne Vol. 5: The Healing Thirst</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+                <!--add more book bellow (follow the format)-->
+
+                <!---->
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+
+    <!--sub-categories-2 end-->
+
+
+     <!--sub-categories-3 starts-->
+
+     <section class="featured" id="featured">
+
+        <h1 class="heading">
+            <span>Young adult</span>
+        </h1>
+
+        <div class="swiper featured-slider">
+
+            <div class="swiper-wrapper">
+
+                <!--section for book 1-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-17.jpg" alt="scott pilgrim vs the world vol 1">
+                    </div>
+
+                    <div class="content">
+                        <h3>scott pilgrim vs the world vol 1</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 2-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-18.jpg" alt="scott pilgrim vs the world vol 2">
+                    </div>
+
+                    <div class="content">
+                        <h3>scott pilgrim vs the world vol 2</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 3-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-19.jpg" alt="scott pilgrim vs the world vol 3">
+                    </div>
+
+                    <div class="content">
+                        <h3>scott pilgrim vs the world vol 3</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 4-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-20.jpg" alt="scott pilgrim vs the world vol 4">
+                    </div>
+
+                    <div class="content">
+                        <h3>scott pilgrim vs the world vol 4</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 5-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-21.jpg" alt="scott pilgrim vs the world vol 5">
+                    </div>
+
+                    <div class="content">
+                        <h3>scott pilgrim vs the world vol 5</h3>
+                        <div class="price">$17.99 <span>$25.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--section for book 6-->
+                <div class="swiper-slide box">
+
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/book-22.jpg" alt="scott pilgrim vs the world vol 6">
+                    </div>
+
+                    <div class="content">
+                        <h3>scott pilgrim vs the world vol 6</h3>
+                        <div class="price">$15.00 <span>$20.00</span></div>
+                        <a href="books-detail.html" class="btn">add to cart</a>
+                    </div>
+
+                </div>
+
+                <!--add more book bellow (follow the format)-->
+
+                <!---->
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+
+    <!--sub-categories-3 end--> 
+    
+    
+
+
+<!--footer section starts-->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <!--Our location-->
+        <div class="box">
+            <h3>our locations</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> vietnam </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> france </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> japan </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> singapore </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> canada </a>
+        </div>
+
+        <!--quick link-->
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="collection.html"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="collection.html"> <i class="fas fa-arrow-right"></i> arrivals </a>
+            <a href="index.html"> <i class="fas fa-arrow-right"></i> reviews </a>
+            <a href="index.html"> <i class="fas fa-arrow-right"></i> blogs </a>
+            <a href="collection.html"> <i class="fas fa-arrow-right"></i> collection </a>
+            <a href="contact.html"> <i class="fas fa-arrow-right"></i> contact us </a>
+        </div>
+
+        <!--extra link-->
+        <div class="box">
+            <h3>Information</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> about us</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> term </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> copy right </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> account info </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> ordered items </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> privacy policy </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> payment method </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> our services </a>
+        </div>
+
+        <!--extra link-->
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> s3938143@rmit.edu.vn </a>
+            <img src="images/worldmap.png.png" class="map" alt="blank world map">
+        </div>
+
+    </div>
+
+    <!--footer social media section-->
+    <div class="share">
+        <a href="https://www.facebook.com" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com" class="fab fa-linkedin"></a>
+    </div>
+
+    <div class="credit"> created by <span>MR.B</span> </div>
+
+</section>
+
+<!--footer section end-->
+
+
+
+
+
+    <!--loader-->
+
+    <div class="loader-container">
+        <img src="images/loader-img-3.gif" alt="cogger-gif">
+    </div>
+
+    
+    <!--bottom to top button-->
+    <i class="scroll-up" id="scroll-up">
+        <img src="icons/bottom-to-top.jpg.png" class="socicon up-arrow" alt="up-arrow"/>
+    </i>
+
+
+    <!--swiper link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--custom js file link -->
+    <script src="js/script.js"></script>
+
+
+
+
+
+    <!--Test section-->
+</body>
+</html>

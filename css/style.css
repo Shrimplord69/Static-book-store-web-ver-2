@@ -705,6 +705,11 @@ section{
             color: var(--green);
         }
 
+        /*for categories section header*/
+        .arrivals .heading a{
+            color: var(--black);
+        }
+
 /*deal section*/
 /*video background*/
 .video-banner{
@@ -1609,5 +1614,8 @@ th:last-child{
 .check-out-button input{
     text-align: center;
 }
+
+
+
 
 /*!Testing section!*/
